@@ -1,0 +1,367 @@
+:root{
+    --color-table: rgb(51, 23, 191);
+    --background-image-color: rgba(25, 92, 187, 0.514);
+    --main-desktop-background-color: #195cbb;
+}
+
+header{
+    height: 10rem;
+}
+
+header h1 {
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+}
+
+header h1:active{
+    text-shadow: none;
+    color: white;
+}
+
+/*Contenedor principal*/
+
+.container{
+    width: 90%;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.797));
+    display: grid;
+    grid-template: 1fr 2fr 2fr 1fr  / 1fr 2fr 2fr 1fr;
+}
+
+.box{
+    background-color: var(--main-desktop-background-color);
+}
+
+/*Header*/
+
+.box-header{
+    grid-area: 1 / 1 / 2 / 5;
+    flex-flow: row nowrap;
+}
+
+/*Contenedor de bienvenida*/
+
+.box-header__box-welcome{
+    border-top-left-radius: 15px;
+}
+
+.box-header__box-welcome h2{
+    font-size: 2.4rem;
+}
+
+.box-header__box-welcome span::before{
+    content: " la pÃ¡gina web de ";
+}
+
+/*Contenedor de horario*/
+
+.box-header__box-schedule{
+    border-top-right-radius: 15px;
+    flex-direction: column;
+}
+
+.box-header__box-schedule h2{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.box-header__box-schedule p{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.box-header__box-schedule h2 span::after{
+    content: "Horario: \A ";
+    white-space: pre;
+}
+
+.box-header__box-schedule p span::after{
+    content: "Lunes a viernes 9:00am - 8:00pm\ASÃ¡bados y domingos 9:00am - 10:00pm";
+    white-space: pre;
+}
+
+.box-header__box-schedule:hover  {
+    background: rgb(9,9,121);
+    background: linear-gradient(0deg, rgba(9,9,121,1) 2%, rgba(25,92,187,1) 100%);
+    cursor: pointer;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+    transition-property: background;
+}
+
+.box-header__box-schedule:active {
+    background: #195cbb;
+}
+
+/*Contenedor de primera imagen*/
+
+.box-img1{
+    grid-area: 2 / 1 / 4 / 2;
+    border-top-right-radius: 0;
+}
+
+.box-img1:focus{
+    filter: none;
+}
+
+.box-img1:hover .box-img1__underscore{
+    background-color: var(--background-image-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.box-img1__underscore p{
+    font-size: 3rem;
+    text-align: center;
+}
+
+/*Contenedor productos*/
+
+.box-products{
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s linear;
+}
+.box-products p{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.box-products:hover{
+    background: rgba(255, 255, 255, 0.607);
+    color: black;
+    cursor: pointer;
+}
+
+.box-products:active{
+    background-image: url(https://png.pngtree.com/png-vector/20190930/ourlarge/pngtree-tennis-ball-icon-in-cartoon-style-png-image_1768295.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+/*Contenedor reglas del tenis*/
+
+.box-rules{
+    grid-area: 3 / 2 / 4 / 3;
+    border-top-left-radius: 0;
+    background-image: url(https://static7.depositphotos.com/1193075/692/i/450/depositphotos_6925255-stock-photo-tennis-court-net.jpg);
+}
+
+.box-rules__underscore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.596);
+    transition: all 0.3s linear;
+}
+
+.box-rules:focus{
+    filter: none;
+}
+
+.box-rules p{
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.box-rules__underscore:hover{
+    background-color:  rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+/*Contenedor resultados juegos*/
+
+.box-score{
+    grid-area: 2 / 3 / 3 / 4;
+    display: inherit;
+    position: relative;
+}
+
+.box-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-score p{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.box-score table {
+    margin: 2rem;
+    border-collapse: collapse ;
+    font-size: 2rem;
+    text-align: center;
+    width: 90%;
+}
+
+.box-score thead {
+    background-color: var(--color-table);
+}
+
+.box-score tbody {
+    background-color: white;
+    color: var(--color-table);
+}
+
+.box-score .score-name {
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.box-score tr:hover{
+    background-color: rgb(11, 11, 126);
+    color: white;
+}
+
+.box-score:hover{
+    cursor: pointer;
+}
+
+.click{
+    position:absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.1s linear;
+}
+
+.box-score:active .click {
+    background: #1885cd88;
+    height: 100%;
+}
+
+/*Contenedor blog*/
+
+.box-blog{
+    grid-area: 3 / 3 / 4 / 4;
+    border-bottom-right-radius: 0;
+    background-image: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s linear;
+}
+
+.box-blog__text{
+    display: unset;
+    text-align: center;
+    font-size: 1.9rem;
+    margin: 2rem;
+    font-weight: bold;
+}
+
+.box-blog:hover{
+    background-color: rgba(128, 128, 128, 0.502);
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+}
+
+.box-blog:focus{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.puntodebreak.com/files/styles/eht/public/novak-djokovic-analisis-cuadro-masculino-usopen-2021.png?itok=KQC2y-QB);
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: none;
+}
+
+/*Contenedor segunda imagen*/
+
+.box-img2{
+    grid-area: 2 / 4 / 4 / 5;
+    border-bottom-left-radius: 0;
+    background-position: center;
+}
+
+.box-img2:hover .box-img2__underscore{
+    background-color: var(--background-image-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.box-img2:focus {
+    filter: none;
+}
+
+.box-img2__underscore p{
+    font-size: 3rem;
+    text-align: center;
+}
+
+/*Footer*/
+
+.box-footer{
+    grid-area: 4 / 1 / 5 / 5;
+    flex-flow: row wrap;
+}
+
+/*Contenedor reservar clase*/
+
+.box-footer__box-date{
+    border-bottom-left-radius: 15px;
+    justify-content: center;
+    transition: all 1s linear;
+}
+
+.box-footer__box-date p{
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.box-footer__box-date span::after{
+    content: "ðŸ‘Ÿ Reservar clase ðŸ‘Ÿ";
+}
+
+.box-footer__box-date:hover{
+    background: linear-gradient(0deg, rgba(92, 92, 158, 0.61) 2%, rgba(25,92,187,1) 100%);
+}
+
+/*Contenedor direcciÃ³n*/
+
+.box-footer__box-location{
+    border-bottom-right-radius: 15px;
+    background-image: url(https://los40es00.epimg.net/los40/imagenes/2018/02/20/bigbang/1519126121_787279_1519126188_noticia_normal.jpg);
+    background-size: 100%;
+    background-position: center;   
+}
+
+.box-location__filter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-location__filter:hover{
+    transition: background 0.2s linear;
+}
+
+.box-location__filter:active{
+    background: rgba(77, 81, 146, 0.753);
+}
+
+.box-location__filter:focus{
+    background: rgba(77, 81, 146, 0.753);
+}
+
+.box-footer__box-location p{
+    font-size: 2.4rem;
+    font-weight: bold;
+}

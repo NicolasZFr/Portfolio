@@ -1,5 +1,8 @@
-html{
-    font-size: 62.5%;
+:root{
+    --title-font: 'Righteous', cursive;
+    --primary-color-font: white;
+    --main-mobile-background-color: #103972;
+    --main-desktop-background-color: #195cbb;
 }
 
 *{
@@ -8,94 +11,262 @@ html{
     padding: 0;
 }
 
-header {
-    width: 100vw;
-    height: 10vh;
-    background-color: lightcoral;
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #1884cd;
+}
+
+header{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 2vw;
+    max-width: 100%;
+    height: 6rem;
 }
 
-.logo p {
-    font-weight: bold;
-    font-size: 2rem;
-    display: inline-block;
+header h1 {
+    color: var(--primary-color-font);
+    font-family: var(--title-font);
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
 }
 
-.logo span {
-    display: inline-block;
-    margin-left: 1vw;
+header h1:active{
+    text-shadow: 0 0 1rem white;
+    color: #103972;
 }
 
-header ul {
-    list-style: none;
-}
-
-header ul li {
-    display: inline-block;
-    font-size: 1.5rem;
-    margin: 0 1vw;
-}
-
-main {
+main{
+    display: flex;
+    justify-content: center;
     max-width: 100vw;
-    background-color: lightgray;
     height: 80vh;
-    display: flex;
-    flex-direction: column;
+    margin: 4rem auto;
 }
 
-h1 {
-    margin: 1vh auto;
-    color: brown;
-    color: rgb(36, 4, 4);
+p, h2{
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.main-text {
-    text-align: justify;
-    width: 80vw;
-    margin: 0 auto;
-}
-
-footer {
-    height: 10vh;
-    background-color: rgb(114, 114, 114);
-    display: flex;
-    justify-content: space-between;
-}
-
-.container-footer p{
-    color: white;
-    font-style: italic;
-}
-
-.rights, .terms {
+img{
+    width: 100%;
     height: 100%;
-    width: 20vw;
+    object-fit:cover;
+}
+
+.container{
+    width: 90%;
     display: flex;
+    flex-flow: row wrap;
+    border: 0.5rem solid white;
+    border-radius: 15px;
+    color: var(--primary-color-font);
+}
+
+.box{
+    background-color: var(--main-mobile-background-color);
+    border: 0.2rem solid white;
+}
+
+.box-rules,
+.box-img1,
+.box-img2,
+.box-blog {
+    flex: 1 1 25%;
+}
+
+.box-header,
+.box-footer {
+    flex: 1 1 50%;
+}
+
+/*Header contenedor*/
+
+.box-header{
+    display: flex;
+    flex-flow: column wrap;
+    order: 2;
+}
+
+/*Bienvenida*/
+
+.box-header__box-welcome{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.rights img {
-    height: 20%;
-    object-fit:cover;
-    margin-right: 1vw;
+.box-header__box-welcome:focus{
+    background-color: var(--main-desktop-background-color);
 }
 
-.terms{
+.box-header__box-welcome h2{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Horario*/
+
+.box-header__box-schedule{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-header__box-schedule p{
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0.9rem;
+}
+
+.box-header__box-schedule:focus{
+    background-color: var(--main-desktop-background-color);
+}
+
+.box-header__box-schedule p span::after{
+    content: "Horario: L-V: 9am-8pm, S-D: 9am-10pm";
+}
+
+/*Primera imagen - Segunda*/
+
+.box-img1{
+    order: 3;
+    border-top-right-radius: 15px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/65/Serena_Williams_Madrid_2014.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.box-img1:focus{
+    filter:contrast(1.5);
+}
+
+.box-img1__underscore{
+    display: none;
+}
+
+/*Productos*/
+
+.box-products{
+    display: none;
+}
+
+/*Primera imagen - Reglas*/
+
+.box-rules{
+    background-image: url(https://los40es00.epimg.net/los40/imagenes/2018/02/20/bigbang/1519126121_787279_1519126188_noticia_normal.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+    order: 1;
+    border-top-left-radius: 15px;
+}
+
+.box-rules:focus{
+    filter:contrast(1.5);
+}
+
+.box-rules__underscore{
+    display: none;
+}
+
+/*Puntaje*/
+
+.box-score{
+    display: none;
+}
+
+/*Blog - Cuarta imagen*/
+
+.box-blog{
+    background-image: url(https://static7.depositphotos.com/1193075/692/i/450/depositphotos_6925255-stock-photo-tennis-court-net.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+    order: 6;
+    border-bottom-right-radius: 15px;
+}
+
+.box-blog:focus{
+    filter:contrast(1.5);
+}
+
+.box-blog__text{
+    display: none;
+}
+
+/*Tercera imagen*/
+
+.box-img2{
+    order: 4;
+    border-bottom-left-radius: 15px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d9/Siniakova_BM16_%282%29_%2827772835415%29.jpg);
+    background-size: 100%;
+    background-position: left;
+    background-size: cover;
+}
+
+.box-img2:focus{
+    filter:contrast(1.5);
+}
+
+.box-img2__underscore{
+    display: none;
+}
+
+/*Footer*/
+
+.box-footer{
+    display: flex;
+    flex-flow: column wrap;
+    order: 5;
+}
+
+/*Agendar*/
+
+.box-footer__box-date{
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.terms p {
-    display: inline-block;
-    margin-left: 1vw;
+.box-footer__box-date:focus{
+    background-color: var(--main-desktop-background-color);
 }
 
-.terms a{
-    text-decoration: none;
-    font-style: normal;
-    color: inherit;
+.box-footer__box-date p{
+    font-size: 1.3rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.box-footer__box-date span::after{
+    content: "Agenda aquÃ­ tus clases grupales y privadas";
+}
+
+/*DirecciÃ³n*/
+
+.box-footer__box-location{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-footer__box-location p{
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.box-footer__box-location:focus{
+    background-color: var(--main-desktop-background-color);
 }

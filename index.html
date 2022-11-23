@@ -4,36 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Proyecto página Github</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="./css/tablet.css" rel="stylesheet" media="screen and (min-width:768px)">
+    <link href="./css/laptop.css" rel="stylesheet" media="screen and (min-width:1024px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <title>Examen NextU</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <p>Mobi</p>
-            <span>Ejemplo de Github</span>
-        </div>
-        <ul class="nav-bar">
-            <li>Home</li>
-            <li>About</li>
-        </ul>
+        <h1>Club de Tenis</h1>
     </header>
     <main>
-        <h1>Etiqueta del main</h1>
-        <div class="main-text">
-            <p><strong>Lorem</strong> ipsum dolor sit amet consectetur adipisicing elit. Voluptate eum porro minima necessitatibus tempore suscipit, vero, reiciendis laboriosam quae deserunt, animi libero consequatur praesentium fuga perferendis temporibus doloribus repellendus natus.</p>
+        <div class="container">
+            <div class="box-header">
+                <div class="box box-header__box-welcome" tabindex="0"><h2>Bienvenido a <span>tu Club de Tenis</span></h2></div>
+                <div class="box box-header__box-schedule" tabindex="0"><h2><span></span></h2><p><span></span></p></div>
+            </div>
+            <div class="box box-img1" tabindex="0">
+                <div class="box-img1__underscore">
+                    <p>Clases grupales</p>
+                </div>
+            </div>
+            <div class="box box-products"><p>Productos</p></div>
+            <div class="box box-rules" tabindex="0">
+                <div class="box-rules__underscore">
+                    <p>Aprende sobre las reglas del tenis</p>
+                </div>
+            </div>
+            <div class="box box-score">
+                <p>Resultados del último juego:</p>
+                <table>
+                    <thead>
+                        <th class="score-name">Nombre</th>
+                        <th>Set 1</th>
+                        <th>Set 2</th>
+                        <th>Set 3</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="score-name">Jokovic</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td class="score-name">Nadal</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="click"></div>
+            </div>
+                <div class="box box-blog" tabindex="0">
+                        <div class="box-blog__text">
+                            <p>Entrada de blog: ¿cómo calentar antes de un entrenamiento de tenis?</p>
+                            <a href="#"> <br>Leer más</a>
+                        </div>
+                </div>
+            <div class="box box-img2" tabindex="0">
+                <div class="box-img2__underscore">
+                    <p>Clases privadas</p>
+                </div>
+            </div>
+            <div class="box-footer">
+                <box class="box box-footer__box-date" tabindex="0"><p><span></span></p></box>
+                <box class="box box-footer__box-location" tabindex="0">
+                    <div class="box-location__filter">
+                        <p>Estamos ubicados en la calle Monserrat, 08970. <br> Barcelona</p>
+                    </div>
+                </box>
+            </div>
         </div>
     </main>
-    <footer class="container-footer">
-        <div class="rights">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
-            <p>2022. Derechos reservados</p>
-        </div>
-        <div class="terms">
-            <p><a href="#">Terms</a></p>
-            <p><a href="#">Privacy</a></p>
-            <p><a href="#">Blog</a></p>
-        </div>
-    </footer>
 </body>
 </html>
