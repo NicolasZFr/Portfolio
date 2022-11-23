@@ -130,7 +130,7 @@ img{
 }
 
 .box-header__box-schedule p span::after{
-    content: "Horario&#58; L&#45;V&#59; 9am&#45;8pm&#44; S&#45;D&#58; 9am&#45;10pm";
+    content: "Horario&#58; L&#45;V&#58; 9am&#45;8pm&#44; S&#45;D&#58; 9am&#45;10pm";
 }
 
 /*Primera imagen - Segunda*/
