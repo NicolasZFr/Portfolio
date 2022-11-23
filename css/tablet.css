@@ -49,7 +49,7 @@ header h1:active{
 }
 
 .box-header__box-welcome span::before{
-    content: " la pÃ¡gina web de ";
+    content: " la página web de ";
 }
 
 /*Contenedor de horario*/
@@ -75,7 +75,7 @@ header h1:active{
 }
 
 .box-header__box-schedule p span::after{
-    content: "Lunes a viernes 9:00am - 8:00pm\ASÃ¡bados y domingos 9:00am - 10:00pm";
+    content: "Lunes a viernes 9:00am - 8:00pm\ASábados y domingos 9:00am - 10:00pm";
     white-space: pre;
 }
 
@@ -325,14 +325,14 @@ header h1:active{
 }
 
 .box-footer__box-date span::after{
-    content: "ðŸ‘Ÿ Reservar clase ðŸ‘Ÿ";
+    content: "👟 Reservar clase 👟";
 }
 
 .box-footer__box-date:hover{
     background: linear-gradient(0deg, rgba(92, 92, 158, 0.61) 2%, rgba(25,92,187,1) 100%);
 }
 
-/*Contenedor direcciÃ³n*/
+/*Contenedor dirección*/
 
 .box-footer__box-location{
     border-bottom-right-radius: 15px;

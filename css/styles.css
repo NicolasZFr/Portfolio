@@ -249,10 +249,10 @@ img{
 }
 
 .box-footer__box-date span::after{
-    content: "Agenda aquÃ­ tus clases grupales y privadas";
+    content: "Agenda aquí tus clases grupales y privadas";
 }
 
-/*DirecciÃ³n*/
+/*Dirección*/
 
 .box-footer__box-location{
     flex: 1 1 50%;
