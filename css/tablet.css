@@ -75,7 +75,7 @@ header h1:active{
 }
 
 .box-header__box-schedule p span::after{
-    content: "Lunes a viernes 9:00am - 8:00pm\ASábados y domingos 9:00am - 10:00pm";
+    content: "Lunes a viernes 9\003A 00am\2010 8\003A 00pm\AS\00E1 bados y domingos 9\003A 00am\2010 10\003A 00pm";
     white-space: pre;
 }
 

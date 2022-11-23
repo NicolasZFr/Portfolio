@@ -50,7 +50,7 @@ main{
 }
 
 .box-header__box-welcome span::before{
-    content: " la p&aacute;gina web de ";
+    content: " la p\00E1gina web de ";
 }
 
 /*Contenedor de horario*/
@@ -76,7 +76,7 @@ main{
 }
 
 .box-header__box-schedule p span::after{
-    content: "Lunes a viernes 9&#58;00am &#45; 8&#58;00pm\AS&aacute;bados y domingos 9&#58;00am &#45; 10&#58;00pm";
+    content: "Lunes a viernes 9\003A 00am &#45; 8\003A 00pm\AS&aacute;bados y domingos 9&#58;00am &#45; 10&#58;00pm";
     white-space: pre;
 }
 
