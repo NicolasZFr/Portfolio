@@ -1,0 +1,5 @@
+/* width >= 330px */
+
+.sidebar {
+    transition-property: translate;
+}
